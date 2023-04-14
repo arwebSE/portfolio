@@ -1,6 +1,7 @@
 {
   "name": "simple-light-react",
   "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
     "start": "vite",
     "build": "vite build",
