@@ -1,11 +1,11 @@
 {
-  "name": "open-pro-next",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "start": "next dev",
     "build": "next build",
-    "start": "next start",
+    "prod": "next start",
     "lint": "next lint"
   },
   "dependencies": {
