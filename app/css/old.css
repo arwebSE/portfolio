@@ -1,0 +1,31 @@
+
+body {
+    background-color: #ededed;
+    overflow: hidden;
+}
+
+p {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+    margin: 2em;
+}
+
+p a {
+    color: rgba(114, 196, 243, 0.3);
+}
+p a:hover {
+    color: #1a759c;
+}
+
+#ssl {
+    bottom: 0;
+    position: absolute;
+    font-size: 10px;
+}
