@@ -28,10 +28,10 @@ export default function RootLayout({
                 className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}
             >
                 <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-                    {/* <Header />
-                        {children}
-                        <Banner /> */}
-                    <p>
+                    <Header />
+                    {children}
+                    <Banner />
+                    {/*  <p>
                         Hey!
                         <br />
                         <br />
@@ -45,7 +45,7 @@ export default function RootLayout({
                         <a href="https://arwebse.github.io">
                             arwebse.github.io
                         </a>
-                    </p>
+                    </p> */}
                 </div>
             </body>
         </html>
