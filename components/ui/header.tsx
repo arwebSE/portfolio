@@ -1,30 +1,38 @@
-"use client";
-
-import { useState, useEffect } from "react";
-
+/* import { useState, useEffect } from "react"; */
 import Link from "next/link";
 import Logo from "./logo";
 import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
+import { useTheme } from "next-themes";
 
 export default function Header() {
-    const [top, setTop] = useState<boolean>(true);
+    /* const [top, setTop] = useState<boolean>(true); */
 
     // detect whether user has scrolled the page down by 10px
-    const scrollHandler = () => {
+    /* const scrollHandler = () => {
         window.pageYOffset > 10 ? setTop(false) : setTop(true);
-    };
+    }; */
 
-    useEffect(() => {
+    /* const [mounted, setMounted] = useState(false); */
+    const { theme, setTheme } = useTheme();
+
+    /* useEffect(() => {
         scrollHandler();
         window.addEventListener("scroll", scrollHandler);
         return () => window.removeEventListener("scroll", scrollHandler);
     }, [top]);
+ */
+    /* useEffect(() => {
+        setMounted(true);
+    }, []);
+    if (!mounted) return null; */
 
     return (
         <header
-            className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
-                !top ? "bg-white backdrop-blur-sm shadow-lg" : ""
+            className={`fixed w-full z-30 md:bg-opacity-90 transition duration-200 ease-in-out ${
+                !top
+                    ? "bg-white dark:bg-neutral-900/80 backdrop-blur-lg shadow-lg"
+                    : ""
             }`}
         >
             <div className="max-w-6xl mx-auto px-5 sm:px-6">
@@ -38,6 +46,7 @@ export default function Header() {
                     <nav className="hidden md:flex md:grow">
                         {/* Desktop sign in links */}
                         <ul className="flex grow justify-end flex-wrap items-center">
+                            <li>theme is: {theme}</li>
                             <li>
                                 <Link
                                     href="/contact"
@@ -54,10 +63,19 @@ export default function Header() {
                                     Contact
                                 </Link>
                             </li>
+
+                            <select
+                                value={theme}
+                                onChange={(e) => setTheme(e.target.value)}
+                            >
+                                <option value="system">System</option>
+                                <option value="dark">Dark</option>
+                                <option value="light">Light</option>
+                            </select>
                         </ul>
                     </nav>
 
-                    <MobileMenu />
+                    {/*  <MobileMenu /> */}
                 </div>
             </div>
         </header>

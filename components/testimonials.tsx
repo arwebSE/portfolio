@@ -49,7 +49,8 @@ export default function Testimonials() {
                                 src={Logo2}
                                 alt="Speedy Bilservice"
                                 width={110}
-                            />
+                            />{" "}
+                            asd
                         </div>
                     </div>
 

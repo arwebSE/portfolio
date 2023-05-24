@@ -1,9 +1,8 @@
 import "./css/style.css";
-//import "./css/old.css";
 
 import { Inter } from "next/font/google";
-
 import Header from "@/components/ui/header";
+import { Providers } from "./providers";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -22,13 +21,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body
-                className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}
+                className={`${inter.variable} font-inter antialiased text-gray-900 tracking-tight`}
             >
                 <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
                     <Header />
-                    {children}
+                    <Providers>{children}</Providers>
                 </div>
             </body>
         </html>
