@@ -144,12 +144,14 @@ export default function Features() {
                                 >
                                     <div>
                                         <div className="font-bold leading-snug tracking-tight mb-1">
-                                            Building the Simple ecosystem
+                                            Needle Grey
                                         </div>
                                         <div className="text-gray-600">
-                                            Take collaboration to the next level
-                                            with security and administrative
-                                            features built for teams.
+                                            The Needle Grey band's custom
+                                            website is a stunning, clean, and
+                                            simple platform. It gets straight to
+                                            the point, featuring social media
+                                            links and tour dates prominently.
                                         </div>
                                     </div>
                                     <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
