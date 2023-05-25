@@ -25,10 +25,12 @@ export default function RootLayout({
             <body
                 className={`${inter.variable} font-inter antialiased text-gray-900 tracking-tight`}
             >
-                <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-                    <Header />
-                    <Providers>{children}</Providers>
-                </div>
+                <Providers>
+                    <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+                        <Header />
+                        {children}
+                    </div>
+                </Providers>
             </body>
         </html>
     );
