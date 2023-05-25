@@ -5,7 +5,7 @@ import Link from "next/link";
 import Logo from "./logo";
 import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
-import { useTheme } from "next-themes";
+import ThemeSwitch from "../utils/ThemeSwitch";
 
 export default function Header() {
     const [top, setTop] = useState<boolean>(true);
@@ -15,19 +15,11 @@ export default function Header() {
         window.pageYOffset > 10 ? setTop(false) : setTop(true);
     };
 
-    const [mounted, setMounted] = useState(false);
-    const { theme, setTheme } = useTheme();
-
     useEffect(() => {
         scrollHandler();
         window.addEventListener("scroll", scrollHandler);
         return () => window.removeEventListener("scroll", scrollHandler);
     }, [top]);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-    if (!mounted) return null;
 
     return (
         <header
@@ -48,7 +40,6 @@ export default function Header() {
                     <nav className="hidden md:flex md:grow">
                         {/* Desktop sign in links */}
                         <ul className="flex grow justify-end flex-wrap items-center">
-                            <li>theme is: {theme}</li>
                             <li>
                                 <Link
                                     href="/contact"
@@ -66,18 +57,7 @@ export default function Header() {
                                 </Link>
                             </li>
 
-                            <select
-                                value={theme}
-                                onChange={(e) => {
-                                    console.log("change theme", e.target.value);
-
-                                    setTheme(e.target.value);
-                                }}
-                            >
-                                <option value="system">System</option>
-                                <option value="dark">Dark</option>
-                                <option value="light">Light</option>
-                            </select>
+                            <ThemeSwitch />
                         </ul>
                     </nav>
 
