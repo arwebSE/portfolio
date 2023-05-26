@@ -24,9 +24,9 @@ export default function Testimonials() {
                     </div>
 
                     {/* LOGOS */}
-                    <div className="max-w-sm md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-5">
+                    <div className="max-w-sm md:max-w-4xl mx-auto flex flex-wrap justify-center">
                         {/* Item */}
-                        <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
+                        <div className="flex items-center justify-center py-2 mx-5">
                             <Image
                                 src={Logo1}
                                 alt="Speedy Bilservice"
@@ -35,22 +35,12 @@ export default function Testimonials() {
                         </div>
 
                         {/* Item */}
-                        <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
+                        <div className="flex items-center justify-center py-2 mx-5">
                             <Image
                                 src={Logo2}
                                 alt="Speedy Bilservice"
                                 width={110}
                             />
-                        </div>
-
-                        {/* Item */}
-                        <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-                            <Image
-                                src={Logo2}
-                                alt="Speedy Bilservice"
-                                width={110}
-                            />{" "}
-                            asd
                         </div>
                     </div>
 
