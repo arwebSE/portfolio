@@ -59,7 +59,7 @@ export default function Testimonials() {
                         className="max-w-3xl mx-auto mt-20"
                         data-aos="zoom-y-out"
                     >
-                        <div className="relative flex items-start border-2 border-gray-200 rounded bg-white">
+                        <div className="relative flex items-start border-2 border-gray-200 rounded bg-white shadow-xl dark:bg-neutral-900/80 backdrop-blur-xl dark:border-neutral-800">
                             {/* Testimonial */}
                             <div className="text-center px-12 py-8 pt-20 mx-4 md:mx-0">
                                 <div className="absolute top-0 -mt-8 left-1/2 transform -translate-x-1/2">

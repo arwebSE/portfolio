@@ -43,7 +43,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="/contact"
-                                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out dark:text-gray-400 dark:text-gray-200 dark:hover:text-white"
                                 >
                                     About
                                 </Link>
@@ -51,7 +51,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="/contact"
-                                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out dark:text-gray-200 dark:hover:text-white"
                                 >
                                     Contact
                                 </Link>
