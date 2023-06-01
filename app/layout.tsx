@@ -3,6 +3,7 @@ import "./css/style.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/ui/header";
 import { Providers } from "./providers";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export const metadata = {
     title: "ARWeb",
@@ -17,6 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body>
+                <GoogleAnalytics trackPageViews />
                 <Providers>
                     <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip antialiased tracking-tight">
                         <Header />
