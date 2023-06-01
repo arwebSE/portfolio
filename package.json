@@ -11,10 +11,10 @@
     },
     "dependencies": {
         "@headlessui/react": "^1.7.13",
+        "@vercel/analytics": "^1.0.1",
         "aos": "^3.0.0-beta.6",
         "next": "13.4.3",
         "next-themes": "^0.2.1",
-        "nextjs-google-analytics": "^2.3.3",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-icons": "^4.8.0",
