@@ -1,4 +1,19 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+
+    "restoreTerminals.terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "nextjs",
+                    "commands": ["yarn dev"]
+                },
+                {
+                    "name": "term",
+                    "commands": ["echo 'hello world'"]
+                }
+            ]
+        }
+    ]
 }
