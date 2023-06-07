@@ -48,14 +48,6 @@ export default function Footer() {
                                     href="#0"
                                     className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                                 >
-                                    Design Work
-                                </a>
-                            </li>
-                            <li className="mb-2">
-                                <a
-                                    href="#0"
-                                    className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
-                                >
                                     iOS / Android Apps
                                 </a>
                             </li>
@@ -65,6 +57,14 @@ export default function Footer() {
                                     className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                                 >
                                     Backend Programming
+                                </a>
+                            </li>
+                            <li className="mb-2">
+                                <a
+                                    href="https://arwebse.github.io"
+                                    className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                                >
+                                    iOS Tweaks (Cydia)
                                 </a>
                             </li>
                         </ul>

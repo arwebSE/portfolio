@@ -1,5 +1,5 @@
 export const metadata = {
-    title: "ARWeb",
+    title: "about | arweb",
     description: "Shaping Your Online Presence",
 };
 

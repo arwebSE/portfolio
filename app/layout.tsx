@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-    title: "ARWeb",
+    title: "arweb",
     description: "Shaping Your Online Presence",
 };
 
