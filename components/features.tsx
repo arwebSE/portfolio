@@ -3,10 +3,12 @@ import { useState, useRef, useEffect } from "react";
 import { TabButton, TabItem } from "./FeatureTab";
 import { IoBriefcase, IoCar, IoMusicalNotes } from "react-icons/io5";
 import { GiHoneypot } from "react-icons/gi";
+import { AiFillAndroid } from "react-icons/ai";
 
 import Polify from "@/public/img/polify.png";
 import NeedleGrey from "@/public/img/ng.png";
 import Speedy from "@/public/img/speedy.png";
+import miWeather from "@/public/img/miweather.png";
 
 export default function Features() {
     const [tab, setTab] = useState<number>(1);
@@ -50,6 +52,14 @@ export default function Features() {
             icon: <GiHoneypot className="w-4 h-4 fill-current" />,
             image: "https://i.imgur.com/9OKMxJs.png",
             link: "https://github.com/arwebSE/miel",
+        },
+        {
+            title: "miWeather",
+            description: "A weather AppWidget written in Kotlin for Android.",
+            icon: <AiFillAndroid className="w-4 h-4 fill-current" />,
+            image: miWeather,
+            link: "https://github.com/arwebSE/miWeather",
+            height: 300,
         },
     ];
 
@@ -114,9 +124,12 @@ export default function Features() {
                                         {tabsData.map((tabData, index) => (
                                             <TabItem
                                                 key={index}
+                                                title={tabData.title}
                                                 isActive={tab === index + 1}
                                                 image={tabData.image}
                                                 link={tabData.link}
+                                                //include height if exist
+                                                height={tabData.height}
                                             />
                                         ))}
                                     </div>

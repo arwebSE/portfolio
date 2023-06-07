@@ -14,9 +14,11 @@ interface TabButtonProps {
 
 interface TabItemProps {
     key: number;
+    title: string;
     isActive: boolean;
     image: string | StaticImageData;
     link?: string;
+    height?: number;
 }
 
 const TabButton = ({
@@ -49,7 +51,14 @@ const TabButton = ({
     );
 };
 
-const TabItem = ({ key, isActive, image, link }: TabItemProps) => {
+const TabItem = ({
+    key,
+    title,
+    isActive,
+    image,
+    link,
+    height,
+}: TabItemProps) => {
     return (
         <Transition
             key={key}
@@ -67,9 +76,9 @@ const TabItem = ({ key, isActive, image, link }: TabItemProps) => {
                 <Image
                     className="md:max-w-none mx-auto rounded"
                     src={image}
-                    width={500}
-                    height={462}
-                    alt="Features bg"
+                    width={height || 500}
+                    height={height || 462}
+                    alt={title + " screenshot"}
                 />
                 {link ? (
                     <a
