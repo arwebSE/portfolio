@@ -19,9 +19,11 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body>
                 <Providers>
-                    <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip antialiased tracking-tight">
-                        <Header />
-                        {children}
+                    <div className="antialiased tracking-tight">
+                        <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+                            <Header />
+                            {children}
+                        </div>
                     </div>
                 </Providers>
                 <Analytics />
