@@ -18,6 +18,7 @@ interface TabItemProps {
     image: string | StaticImageData;
     link?: string;
     height?: number;
+    linkText?: string;
 }
 
 const TabButton = ({
@@ -50,7 +51,14 @@ const TabButton = ({
     );
 };
 
-const TabItem = ({ title, isActive, image, link, height }: TabItemProps) => {
+const TabItem = ({
+    title,
+    isActive,
+    image,
+    link,
+    height,
+    linkText,
+}: TabItemProps) => {
     const [tab, setTab] = useState<number>(1);
 
     const tabs = useRef<HTMLDivElement>(null);
@@ -90,7 +98,7 @@ const TabItem = ({ title, isActive, image, link, height }: TabItemProps) => {
                         className="flex items-center justify-center mt-5 text-lg font-bold leading-snug tracking-tight text-white transition duration-300 ease-in-out bg-slate-950 bg-opacity-80 hover:bg-opacity-70 rounded py-3 px-5"
                         href={link}
                     >
-                        See more about this project &rarr;
+                        {linkText || "See more about this project"} &rarr;
                     </a>
                 ) : (
                     ""

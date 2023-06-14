@@ -27,16 +27,20 @@ export default function Features() {
         {
             title: "Polify",
             description:
-                "A custom site for Polify, a cutting-edge Web3 organization, tailored to their needs and collaboratively designed to reflect their vision.",
+                "A site for Web3 organization Polify, tailored to their needs and collaboratively designed to reflect their vision.",
             icon: <IoBriefcase className="w-4 h-4 fill-current" />,
             image: Polify,
+            link: "https://polify.xyz",
+            linkText: "Visit site",
         },
         {
             title: "Needle Grey",
             description:
-                "The Needle Grey band's custom website is a stunning, clean, and simple platform. It gets straight to the point, featuring social media links and tour dates prominently.",
+                "The Needle Grey band's custom website is a stunning, clean, and simple platform.",
             icon: <IoMusicalNotes className="w-4 h-4 fill-current" />,
             image: NeedleGrey,
+            link: "https://needlegrey.com",
+            linkText: "Visit site",
         },
         {
             title: "Speedy Bilservice",
@@ -129,8 +133,8 @@ export default function Features() {
                                                     isActive={tab === index + 1}
                                                     image={tabData.image}
                                                     link={tabData.link}
-                                                    //include height if exist
                                                     height={tabData.height}
+                                                    linkText={tabData.linkText}
                                                 />
                                             ))}
                                         </div>
