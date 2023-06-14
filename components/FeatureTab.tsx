@@ -2,7 +2,7 @@
 
 import { Transition } from "@headlessui/react";
 import Image, { StaticImageData } from "next/image";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 interface TabButtonProps {
     isActive: boolean;
@@ -51,6 +51,18 @@ const TabButton = ({
 };
 
 const TabItem = ({ title, isActive, image, link, height }: TabItemProps) => {
+    const [tab, setTab] = useState<number>(1);
+
+    const tabs = useRef<HTMLDivElement>(null);
+    const heightFix = () => {
+        if (tabs.current && tabs.current.parentElement)
+            tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`;
+    };
+
+    useEffect(() => {
+        heightFix();
+    }, []);
+
     return (
         <Transition
             show={isActive}
@@ -62,6 +74,8 @@ const TabItem = ({ title, isActive, image, link, height }: TabItemProps) => {
             leave="transition ease-in-out duration-300 transform absolute"
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 -translate-y-16"
+            beforeEnter={() => heightFix()}
+            unmount={false}
         >
             <div className="relative inline-flex flex-col">
                 <Image

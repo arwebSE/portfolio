@@ -115,23 +115,25 @@ export default function Features() {
                         >
                             <div className="relative flex flex-col text-center lg:text-right">
                                 {/* Tabs items */}
-                                <div
-                                    className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1"
-                                    data-aos="zoom-y-out"
-                                    ref={tabs}
-                                >
-                                    <div className="relative flex flex-col text-center lg:text-right">
-                                        {tabsData.map((tabData, index) => (
-                                            <TabItem
-                                                key={index}
-                                                title={tabData.title}
-                                                isActive={tab === index + 1}
-                                                image={tabData.image}
-                                                link={tabData.link}
-                                                //include height if exist
-                                                height={tabData.height}
-                                            />
-                                        ))}
+                                <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
+                                    <div className="transition-all">
+                                        <div
+                                            className="relative flex flex-col text-center lg:text-right"
+                                            data-aos="zoom-y-out"
+                                            ref={tabs}
+                                        >
+                                            {tabsData.map((tabData, index) => (
+                                                <TabItem
+                                                    key={index}
+                                                    title={tabData.title}
+                                                    isActive={tab === index + 1}
+                                                    image={tabData.image}
+                                                    link={tabData.link}
+                                                    //include height if exist
+                                                    height={tabData.height}
+                                                />
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
