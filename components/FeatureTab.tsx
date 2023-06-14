@@ -13,7 +13,6 @@ interface TabButtonProps {
 }
 
 interface TabItemProps {
-    key: number;
     title: string;
     isActive: boolean;
     image: string | StaticImageData;
@@ -51,17 +50,9 @@ const TabButton = ({
     );
 };
 
-const TabItem = ({
-    key,
-    title,
-    isActive,
-    image,
-    link,
-    height,
-}: TabItemProps) => {
+const TabItem = ({ title, isActive, image, link, height }: TabItemProps) => {
     return (
         <Transition
-            key={key}
             show={isActive}
             appear={true}
             className="w-full"
