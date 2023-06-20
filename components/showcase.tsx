@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { TabButton, TabItem } from "./FeatureTab";
+import { TabButton, TabItem } from "./ShowcaseTab";
 import { IoBriefcase, IoCar, IoMusicalNotes } from "react-icons/io5";
 import { GiHoneypot } from "react-icons/gi";
 import { AiFillAndroid } from "react-icons/ai";
@@ -68,10 +68,10 @@ export default function Features() {
     ];
 
     return (
-        <section className="relative">
+        <section className="relative pb-12">
             {/* Section background (needs .relative class on parent and next sibling elements) */}
             <div
-                className="absolute inset-0 bg-gray-100 dark:bg-black pointer-events-none mb-16"
+                className="absolute inset-0 bg-gray-50 dark:bg-gray-900/10 pointer-events-none"
                 aria-hidden="true"
             ></div>
             <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-300 transform -translate-y-1/2 dark:bg-gray-800"></div>
@@ -93,7 +93,7 @@ export default function Features() {
                     <div className="md:grid md:grid-cols-12 md:gap-6">
                         {/* Content */}
                         <div
-                            className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
+                            className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6"
                             data-aos="fade-right"
                         >
                             {/* Tabs buttons */}

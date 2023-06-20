@@ -49,6 +49,7 @@ module.exports = {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+                solutions: "url('/img/solutions.svg')",
             },
             spacing: {
                 "9/16": "56.25%",
@@ -120,6 +121,9 @@ module.exports = {
             },
             zIndex: {
                 "-1": "-1",
+            },
+            saturate: {
+                75: ".75",
             },
         },
     },

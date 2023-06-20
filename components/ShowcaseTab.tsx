@@ -95,7 +95,7 @@ const TabItem = ({
                 />
                 {link ? (
                     <a
-                        className="flex items-center justify-center mt-5 text-lg font-bold leading-snug tracking-tight text-white transition duration-300 ease-in-out bg-slate-950 bg-opacity-80 hover:bg-opacity-70 rounded py-3 px-5"
+                        className="flex items-center justify-center mt-5 text-lg font-bold leading-snug tracking-tight text-white transition duration-300 ease-in-out bg-gray-700 dark:bg-gray-900 bg-opacity-80 hover:bg-opacity-70 rounded py-3 px-5"
                         href={link}
                     >
                         {linkText || "See more about this project"} &rarr;
