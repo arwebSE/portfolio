@@ -1,4 +1,5 @@
 import { FaCss3, FaHtml5 } from "react-icons/fa";
+import { DiJavascript1 } from "react-icons/di";
 import {
     SiElectron,
     SiExpress,
@@ -10,7 +11,7 @@ import {
     SiReact,
     SiTailwindcss,
 } from "react-icons/si";
-import { DiJavascript1 } from "react-icons/di";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 export default function Solutions() {
     const solutionsData = [
@@ -20,13 +21,15 @@ export default function Solutions() {
                 "HTML is the standard markup language for documents designed to be displayed in a web browser.",
             icon: <FaHtml5 className="w-8 h-8 fill-current" />,
             color: "bg-[#E34F26] text-[#FFFFFF]",
+            link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
         },
         {
             title: "CSS",
             description:
-                "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.",
+                "Cascading Style Sheets is used for describing the style of a document written in HTML.",
             icon: <FaCss3 className="w-8 h-8 fill-current" />,
             color: "bg-[#1572B6] text-[#FFFFFF]",
+            link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
         },
         {
             title: "JavaScript",
@@ -34,6 +37,7 @@ export default function Solutions() {
                 "JavaScript is a programming language that gives interactivity to web pages and apps.",
             icon: <DiJavascript1 className="w-8 h-8 fill-current" />,
             color: "bg-[#F7DF1E] text-[#000000]",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         },
         {
             title: "Tailwind CSS",
@@ -41,13 +45,15 @@ export default function Solutions() {
                 "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.",
             icon: <SiTailwindcss className="w-8 h-8 fill-current" />,
             color: "bg-[#38BDF8]",
+            link: "https://tailwindcss.com/",
         },
         {
             title: "Headless CMS",
             description:
-                "A headless Content Management System is built as a repository that makes content accessible via an API for display on the target app.",
+                "A headless Content Management System is built as a repository that makes content accessible via an API for the target app.",
             icon: <SiGatsby className="w-8 h-8 fill-current" />,
             color: "bg-[#613091]",
+            link: "https://www.sanity.io/headless-cms",
         },
         {
             title: "Electron",
@@ -62,6 +68,7 @@ export default function Solutions() {
                 "Express.js is a web application framework for Node.js, designed for building web applications and APIs.",
             icon: <SiExpress className="w-8 h-8 fill-current" />,
             color: "bg-[#000000] text-[#FFFFFF]",
+            link: "https://expressjs.com/",
         },
         {
             title: "React",
@@ -69,6 +76,7 @@ export default function Solutions() {
                 "React is a JavaScript library for building user interfaces.",
             icon: <SiReact className="w-8 h-8 fill-current" />,
             color: "bg-[#61DAFB]",
+            link: "https://reactjs.org/",
         },
         {
             title: "Next.js",
@@ -76,6 +84,7 @@ export default function Solutions() {
                 "Next.js is a hybrid static & server rendering application framework built on top of React.",
             icon: <SiNextdotjs className="w-8 h-8 fill-current" />,
             color: "bg-[#000000] text-[#FFFFFF]",
+            link: "https://nextjs.org/",
         },
         {
             title: "Node.js",
@@ -83,6 +92,7 @@ export default function Solutions() {
                 "Node.js is an cross-platform back-end JavaScript environment that can be used for building scalable network applications.",
             icon: <SiNodedotjs className="w-8 h-8 fill-current" />,
             color: "bg-[#339933]",
+            link: "https://nodejs.org/",
         },
         {
             title: "GraphQL",
@@ -90,6 +100,7 @@ export default function Solutions() {
                 "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.",
             icon: <SiGraphql className="w-8 h-8 fill-current" />,
             color: "bg-[#E10098]",
+            link: "https://graphql.org/",
         },
         {
             title: "Git",
@@ -97,6 +108,7 @@ export default function Solutions() {
                 "Git is a version control system designed to handle everything from small to very large projects with speed and efficiency.",
             icon: <SiGit className="w-8 h-8 fill-current" />,
             color: "bg-[#F05032]",
+            link: "https://git-scm.com/",
         },
     ];
 
@@ -122,26 +134,35 @@ export default function Solutions() {
 
                     {/* Items */}
                     <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
-                        {solutionsData.map((data, index) => (
+                        {solutionsData.map((solution, index) => (
                             <div
                                 key={index}
-                                className="relative flex flex-col items-center p-6 rounded shadow-xl dark:bg-neutral-900/80 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-gray-100/30 dark:border-gray-900/10"
+                                className="relative flex flex-col items-center p-6 rounded shadow-xl dark:bg-neutral-900/80 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-gray-100/30 dark:border-gray-900/10 min-h-[17rem]"
                             >
                                 <div
                                     className={
                                         "flex justify-center items-center w-[3rem] h-[3rem] bg-blue-600 rounded-full shadow flex-shrink-0 text-white mb-4" +
-                                        (data.color ? " " + data.color : "")
+                                        (solution.color
+                                            ? " " + solution.color
+                                            : "")
                                     }
                                 >
-                                    {data.icon}
+                                    {solution.icon}
                                 </div>
-
                                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1 text-gray-900 dark:text-gray-100">
-                                    {data.title}
+                                    {solution.title}
                                 </h4>
                                 <p className="text-gray-900 text-center dark:text-gray-100">
-                                    {data.description}
+                                    {solution.description}
                                 </p>
+                                <div className="mt-3 absolute bottom-5">
+                                    <a
+                                        href={solution.link}
+                                        className="inline-flex items-center justify-center h-8 px-2 text-base font-medium rounded-md text-white/70 bg-black/50 hover:bg-blue-700"
+                                    >
+                                        Learn More <HiArrowNarrowRight />
+                                    </a>
+                                </div>
                             </div>
                         ))}
                     </div>

@@ -10,7 +10,7 @@ import NeedleGrey from "@/public/img/ng.png";
 import Speedy from "@/public/img/speedy.png";
 import miWeather from "@/public/img/miweather.png";
 
-export default function Features() {
+export default function Showcase() {
     const [tab, setTab] = useState<number>(1);
     const tabs = useRef<HTMLDivElement>(null);
 

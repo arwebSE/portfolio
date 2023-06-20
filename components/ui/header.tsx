@@ -23,9 +23,9 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed w-full z-30 md:bg-opacity-90 transition duration-200 ease-in-out ${
+            className={`fixed w-full z-30 md:bg-opacity-50 transition duration-200 ease-in-out ${
                 !top
-                    ? "bg-white dark:bg-neutral-950/80 backdrop-blur-lg shadow-lg"
+                    ? "bg-white dark:bg-neutral-950/80 backdrop-blur-xl shadow-lg"
                     : ""
             }`}
         >

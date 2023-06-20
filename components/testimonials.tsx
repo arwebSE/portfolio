@@ -76,7 +76,7 @@ export default function Testimonials() {
                                     <span>CEO</span>{" "}
                                     <a
                                         className="text-blue-600 hover:underline"
-                                        href="#0"
+                                        href="https://www.speedybilservice.se/"
                                     >
                                         @Speedy Bilservice
                                     </a>
