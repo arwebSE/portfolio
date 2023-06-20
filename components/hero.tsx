@@ -19,7 +19,7 @@ export default function Hero() {
                 {/* Hero content */}
                 <div className="pt-32 pb-12 md:pt-40 md:pb-20 relative flex place-items-center before:absolute before:h-[300px] before:w-[450px] before:-translate-x-1 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:content-[''] after:absolute after:-z-20 after:h-[200px] after:w-[240px] after:translate-x-1/2 after:bg-gradient-radial after:from-sky-200 after:via-blue-200 after:content-[''] before:dark:bg-gradient-to-b before:dark:from-transparent before:dark:to-blue-700  after:dark:from-sky-900 after:dark:via-[#006AED] before:dark:opacity-30 after:dark:opacity-80 before:lg:h-[400px] before:blur-2xl after:blur-xl">
                     {/* Section header */}
-                    <div className="text-center pb-12 md:pb-16 px-8 py-8 rounded-2xl backdrop-blur-md border border-gray-200/70 dark:border-gray-800/50 backdrop-brightness-90 dark:backdrop-brightness-50">
+                    <div className="text-center pb-12 md:pb-16 px-8 py-8 rounded-2xl backdrop-blur-md border border-gray-200/70 dark:border-gray-800/50 dark:backdrop-brightness-50">
                         <h1
                             className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
                             data-aos="zoom-y-out"
