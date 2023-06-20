@@ -158,7 +158,7 @@ export default function Solutions() {
                                 <div className="mt-3 absolute bottom-5">
                                     <a
                                         href={solution.link}
-                                        className="inline-flex items-center justify-center h-8 px-2 text-base font-medium rounded-md text-white/70 bg-black/50 hover:bg-blue-700"
+                                        className="inline-flex items-center justify-center h-8 px-2 text-base font-medium rounded-md text-black/50 dark:text-white/70 bg-white/30 dark:bg-black/50 hover:bg-blue-100"
                                     >
                                         Learn More <HiArrowNarrowRight />
                                     </a>
