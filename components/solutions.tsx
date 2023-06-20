@@ -1,5 +1,6 @@
 import { FaCss3, FaHtml5 } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
+import { HiArrowNarrowRight } from "react-icons/hi";
 import {
     SiElectron,
     SiExpress,
@@ -11,7 +12,6 @@ import {
     SiReact,
     SiTailwindcss,
 } from "react-icons/si";
-import { HiArrowNarrowRight } from "react-icons/hi";
 
 export default function Solutions() {
     const solutionsData = [
@@ -61,6 +61,7 @@ export default function Solutions() {
                 "Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS.",
             icon: <SiElectron className="w-8 h-8 fill-current" />,
             color: "bg-white text-[#47848F]",
+            link: "https://www.electronjs.org/",
         },
         {
             title: "Express.js",
@@ -160,7 +161,8 @@ export default function Solutions() {
                                         href={solution.link}
                                         className="inline-flex items-center justify-center h-8 px-2 text-base font-medium rounded-md text-black/50 dark:text-white/70 bg-white/30 dark:bg-black/50 hover:bg-blue-100"
                                     >
-                                        Learn More <HiArrowNarrowRight />
+                                        Learn More
+                                        <HiArrowNarrowRight className="ml-1" />
                                     </a>
                                 </div>
                             </div>
