@@ -1,6 +1,5 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
 import Header from "@/components/ui/header";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/react";
